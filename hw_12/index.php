@@ -7,14 +7,22 @@ $search_string = ['Интернет - большая сеть компьютер
     'PHP сконструирован специально для ведения Web-разработок и его код может внедряться неспосредственно в HTML'
 ];
 
-function regularCheck($words,$string){
-    foreach ($string as $value){
+function regularCheck($words,$string)
+{
+    $map = [];
+    for ($i = 0; $i < count($string); $i++) {
         foreach ($words as $word) {
-            if(preg_match("/$word+/i",$value)){
-               $text[] = $word;
+                if (preg_match("/$word/iu", $string[$i])) {
+                    $map[] = $word;
+                }
             }
         }
-    }
-return $text;
+
+    return $map;
 }
-print_r(regularCheck($search_words,$search_string));
+$arr[] = regularCheck($search_words,$search_string);
+echo '<pre>';
+print_r($arr);
+
+print_r( regularCheck($search_words,$search_string));
+print_r($search_string);
