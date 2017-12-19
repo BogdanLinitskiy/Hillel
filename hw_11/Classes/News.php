@@ -16,7 +16,7 @@ class News extends  Publications
     }
     public function getShortPreview()
     {
-        return parent::getShortPreview().'<br>'.$this->source;
+        return parent::getShortPreview().'<br>' . '<h4>' . $this->source . '</h4>';
     }
 
 }

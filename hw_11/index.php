@@ -1,10 +1,13 @@
 <?php
-
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 require_once 'DB/connect_db.php';
 require_once 'Classes/Postable.php';
 require_once 'Classes/Publications.php';
 require_once 'Classes/Article.php';
 require_once 'Classes/News.php';
+require_once 'Classes/Note.php';
 require_once 'Classes/PublicationsWriter.php';
 
 echo '<meta charset="UTF-8">';

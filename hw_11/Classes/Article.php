@@ -17,7 +17,7 @@ class Article extends  Publications
 
     public function getShortPreview()
     {
-        return parent::getShortPreview().'<br>'.$this->author;
+        return parent::getShortPreview().'<br>' . '<h4>' . $this->author .'</h4>';
     }
 
 }

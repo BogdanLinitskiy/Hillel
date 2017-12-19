@@ -37,12 +37,12 @@
 
      public function getShortPreview()
      {
-         return $this->title . '<br>' . $this->entry_text . '<br>' . $this->publication_type . '<br>' . '<a href="full_info.php?id=' . $this->id . '">full text</a>';
+         return '<h2>'.$this->title . '</h2><br>' .'<p>' . $this->entry_text . '</p><br>' . '<h5>' .
+             $this->publication_type . '</h5><br>' . '<a href="full_info.php?id=' . $this->id . '">full text</a>';
      }
 
      public function getFullInfo()
      {
-         return $this->title . '<br>' . $this->entry_text . '<br>' . $this->full_text . '<br>' . $this->publication_type . '<br>' .
-             '<a href="index.php"> go back</a>';
+         return '<h2>'.$this->title . '</h2><br>' .'<p>' . $this->full_text . '</p><br>' . '<a href="index.php"> go back</a>';
      }
  }
