@@ -1,14 +1,11 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Да
- * Date: 25.12.2017
- * Time: 19:23
- */
+
+namespace Cart;
 
 class ExChange
 {
     public function convert(){
-
+        $cart = new Cart();
+        $cart->getProducts();
     }
 }

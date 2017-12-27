@@ -12,8 +12,10 @@ class Cartc
     }
     protected function getProducts()
     {
-        foreach ($this->products as $product){
-           echo $product."<br>";
+        foreach ($this->products as $product) {
+            foreach ($product as $item) {
+                echo $item . "<br>";
+            }
         }
     }
     protected function saveCart(){
